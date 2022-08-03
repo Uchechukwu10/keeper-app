@@ -101,7 +101,7 @@ form button {
   outline: none;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 600px) {
   .note {
     background: #fff;
     border-radius: 7px;
@@ -109,6 +109,10 @@ form button {
     padding: 10px;
     width: 80%;
     margin: 16px;
-    float: left;
+  }
+  .notes {
+    display: flex;
+    width: 700px;
+    flex-direction: column;
   }
 }

@@ -19,17 +19,30 @@ function App() {
     return (
       <Note 
       key={index}
+      id={index}
       title={note.title}
       content={note.content.substring(0,50) + "..."} 
+      deleteItem={deleteItem}
       />
     )
-    }
+  }
+
+  function deleteItem(id) {
+    console.log(`I don delete item wey get id ${id}`);
+    setNotes(prevValue => {
+      return prevValue.filter((item, index) => {
+        return index !== id
+      })
+    })
+  }
+
+
 
   return (
     <div>
       <Header />
       <CreateArea addNote={addNote}/>
-      {notes.map(createNote)};
+      <div className="notes">{notes.map(createNote)}</div>
       <Footer />
     </div>
   );
