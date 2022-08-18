@@ -39,7 +39,7 @@ function App() {
 
 
   return (
-    <div>
+    <div className="container">
       <Header />
       <CreateArea addNote={addNote}/>
       <div className="notes">{notes.map(createNote)}</div>
