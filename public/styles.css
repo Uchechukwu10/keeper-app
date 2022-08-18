@@ -118,7 +118,7 @@ form button {
   }
   .notes {
     display: flex;
-    width: 700px;
+    width: 80%;
     flex-direction: column;
   }
   .create-note {
